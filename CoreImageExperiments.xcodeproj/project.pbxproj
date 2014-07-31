@@ -12,6 +12,7 @@
 		CEC6643D198ADDB100DDD269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC6643B198ADDB100DDD269 /* Main.storyboard */; };
 		CEC6643F198ADDB100DDD269 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC6643E198ADDB100DDD269 /* Images.xcassets */; };
 		CEC6644B198ADDB100DDD269 /* CoreImageExperimentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6644A198ADDB100DDD269 /* CoreImageExperimentsTests.swift */; };
+		CEC66455198ADF5600DDD269 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC66454198ADF5600DDD269 /* CoreImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		CEC66444198ADDB100DDD269 /* CoreImageExperimentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreImageExperimentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC66449198ADDB100DDD269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEC6644A198ADDB100DDD269 /* CoreImageExperimentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImageExperimentsTests.swift; sourceTree = "<group>"; };
+		CEC66454198ADF5600DDD269 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC66455198ADF5600DDD269 /* CoreImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +60,7 @@
 		CEC66429198ADDB100DDD269 = {
 			isa = PBXGroup;
 			children = (
+				CEC66454198ADF5600DDD269 /* CoreImage.framework */,
 				CEC66434198ADDB100DDD269 /* CoreImageExperiments */,
 				CEC66447198ADDB100DDD269 /* CoreImageExperimentsTests */,
 				CEC66433198ADDB100DDD269 /* Products */,
