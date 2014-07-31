@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
     </dependencies>
     <scenes>
@@ -16,17 +17,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ekl-2T-VF5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ekl-2T-VF5">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="325"/>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mwu-s8-hFf">
-                                <rect key="frame" x="101" y="430" width="118" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mwu-s8-hFf">
+                                <rect key="frame" x="18" y="430" width="284" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QPV-x3-TPH"/>
+                                </constraints>
                                 <connections>
                                     <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="gvy-H0-3Mw"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAh-9A-He4">
+                                <rect key="frame" x="212" y="333" width="88" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="JGt-ig-mEu"/>
+                                    <constraint firstAttribute="height" constant="30" id="Si2-2G-U5W"/>
+                                </constraints>
+                                <state key="normal" title="Load image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nh9-AS-ecd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDY-td-7ts">
+                                <rect key="frame" x="195" y="371" width="105" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="cY1-5j-HAX"/>
+                                    <constraint firstAttribute="height" constant="30" id="ivG-fa-Wqs"/>
+                                </constraints>
+                                <state key="normal" title="Save to Album">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="savePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3QF-fi-d9E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YAh-9A-He4" firstAttribute="top" secondItem="Ekl-2T-VF5" secondAttribute="bottom" constant="8" id="B3w-Cb-emg"/>
+                            <constraint firstItem="NDY-td-7ts" firstAttribute="top" secondItem="YAh-9A-He4" secondAttribute="bottom" constant="8" id="GtB-rW-sQz"/>
+                            <constraint firstItem="Mwu-s8-hFf" firstAttribute="top" secondItem="NDY-td-7ts" secondAttribute="bottom" constant="29" id="Otv-rM-dzj"/>
+                            <constraint firstItem="Ekl-2T-VF5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Sc2-LO-zL8"/>
+                            <constraint firstAttribute="trailing" secondItem="YAh-9A-He4" secondAttribute="trailing" constant="20" id="XuT-hE-wa6"/>
+                            <constraint firstItem="Mwu-s8-hFf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="cvp-c7-dDd"/>
+                            <constraint firstItem="Ekl-2T-VF5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hUS-8O-VZw"/>
+                            <constraint firstAttribute="trailing" secondItem="Ekl-2T-VF5" secondAttribute="trailing" id="mrO-Be-jvg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mwu-s8-hFf" secondAttribute="bottom" constant="20" id="vH7-4V-Igi"/>
+                            <constraint firstAttribute="trailing" secondItem="Mwu-s8-hFf" secondAttribute="trailing" constant="20" id="wZz-WR-knx"/>
+                            <constraint firstAttribute="trailing" secondItem="NDY-td-7ts" secondAttribute="trailing" constant="20" id="wiM-ZY-LA4"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics">
